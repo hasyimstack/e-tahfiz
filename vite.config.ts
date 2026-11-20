@@ -8,6 +8,18 @@ export default defineConfig(() => {
   return {
     base: './',
     plugins: [
+      {
+        name: 'vite-entry-swap',
+        transformIndexHtml: {
+          order: 'pre',
+          handler(html: string) {
+            return html.replace(
+              /<!--APP_ENTRY_START-->[\s\S]*?<!--APP_ENTRY_END-->/,
+              '<script type="module" src="/src/main.tsx"></script>'
+            );
+          },
+        },
+      },
       react(),
       tailwindcss(),
       // Copies src/assets into dist/ so root-relative URLs like
