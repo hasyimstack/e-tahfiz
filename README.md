@@ -35,13 +35,20 @@ Repositori ini sudah dilengkapi file workflow otomatis di `.github/workflows/dep
    git push -u origin main
    ```
 
-3. **Aktifkan GitHub Pages**
-   - Buka repositori Anda di GitHub.
-   - Masuk ke menu **Settings** → **Pages**.
-   - Pada bagian **Build and deployment → Source**, pilih **GitHub Actions**.
-   - Tunggu 1–2 menit hingga workflow **Deploy to GitHub Pages** selesai (centang hijau di tab **Actions**).
-   - Link publik website Anda akan aktif di:
-     `https://USERNAME.github.io/NAMA-REPO/`
+3. **Aktifkan GitHub Pages (Pilih salah satu opsi)**
+
+   **Opsi A — Paling Mudah (Deploy from a branch `/docs`):**
+   - Buka repositori Anda di GitHub → **Settings** → **Pages**.
+   - Pada **Build and deployment → Source**, pilih **Deploy from a branch**.
+   - Pilih Branch: **`main`** dan Folder: **`/docs`** (lalu klik **Save**).
+   - Folder `docs/` sudah berisi hasil *build* siap pakai (`index.html` + `assets/`).
+
+   **Opsi B — Otomatis dengan GitHub Actions:**
+   - Pastikan folder `.github/workflows/deploy.yml` ikut masuk ke repositori.
+   - Buka **Settings** → **Pages** → **Source**, pilih **GitHub Actions**.
+
+   Tunggu 1–2 menit, lalu buka link publik Anda di:
+   `https://USERNAME.github.io/NAMA-REPO/`
 
 ---
 
