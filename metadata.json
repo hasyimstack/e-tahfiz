@@ -1,0 +1,6 @@
+{
+  "name": "Prisma",
+  "description": "Prisma is a worldwide network of visual artists, filmmakers and storytellers crafting studio-grade visual workflows and cinematic narratives.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
